@@ -20,3 +20,8 @@
       repo: https://github.com/Dynatrace-Adam-Gardner/ansible-cicd.git
       clone: no
       dest: /var/www/html
+
+  - name: Delete playbook from webserver
+    file:
+      path: /var/www/html/test.playbook.yml
+      state: absent
