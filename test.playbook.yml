@@ -1,2 +1,22 @@
 ---
-- name: Dummy Playbook
+#
+# This playbook will be set to run periodically in AWX / Ansible Tower
+#
+
+- name: Temporary CICD
+  hosts: all
+  become: yes
+
+  tasks:
+
+  - name: Ensure httpd is started
+    service:
+      name: httpd
+      state: started
+
+  - name: Ensure latest copy of index.php
+    become: yes
+    git:
+      repo: https://github.com/Dynatrace-Adam-Gardner/ansible-cicd.git
+      clone: no
+      dest: /var/www/html
