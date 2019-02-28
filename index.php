@@ -1,6 +1,6 @@
 <?php
 
-$maxWait = 1;
+$maxWait = 2;
 $random = rand(0,$maxWait);
 sleep($random);
 
