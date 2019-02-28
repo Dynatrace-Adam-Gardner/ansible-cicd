@@ -20,7 +20,6 @@
       repo: https://github.com/Dynatrace-Adam-Gardner/ansible-cicd.git
       clone: no
       dest: /var/www/html
-      version: b5d528bc6b7e620f6cc9feaa05f3b4a6e293534b
 
   - name: Delete playbook from webserver
     file:
